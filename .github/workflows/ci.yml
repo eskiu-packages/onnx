@@ -19,7 +19,7 @@ jobs:
         run: |
           curl -fsSL https://eskiu-lang.org/install.sh | ESKIU_PREFIX=$HOME/.eskiu sh
           echo "$HOME/.eskiu/bin" >> $GITHUB_PATH
-          curl -fsSL https://github.com/microsoft/onnxruntime/releases/download/v$ORT_VERSION/onnxruntime-linux-x64-$ORT_VERSION.tgz | tar xz -C $HOME
+          curl -fsSL https://github.com/eskiu-packages/onnx/releases/download/onnxruntime-$ORT_VERSION/onnxruntime-linux-x64-$ORT_VERSION.tgz | tar xz -C $HOME
           echo "ORT=$HOME/onnxruntime-linux-x64-$ORT_VERSION" >> $GITHUB_ENV
       - name: Layout check
         run: CC=cc ESKIUC=eskiuc tools/layout_check.sh $ORT/include $ORT/lib
@@ -52,7 +52,7 @@ jobs:
           # The archive's paths use backslashes; unzip extracts it and exits with 1 (a warning).
           unzip -q eskiu.zip -d $HOME/eskiu || [ $? -eq 1 ]
           test -x $HOME/eskiu/bin/eskiuc.exe
-          curl -fsSL -o ort.zip https://github.com/microsoft/onnxruntime/releases/download/v$ORT_VERSION/onnxruntime-win-x64-$ORT_VERSION.zip
+          curl -fsSL -o ort.zip https://github.com/eskiu-packages/onnx/releases/download/onnxruntime-$ORT_VERSION/onnxruntime-win-x64-$ORT_VERSION.zip
           # Leave out the 400 MB of debug symbols.
           unzip -q ort.zip "*/include/*" "*/lib/*.dll" -d $HOME
           # MinGW links against the DLL itself, kept alone in its own directory.
