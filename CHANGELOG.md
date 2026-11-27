@@ -9,7 +9,7 @@ All notable changes to this package are documented here. The format follows
 ### Changed
 
 - docs/README.md says how a ui app gets ONNX Runtime: `ui build` links its dynamic library
-  and puts it in the app (ui 0.7.1 on), and the app needs macOS 14 on a Mac.
+  and puts it in the app (the ui release after 0.7.0), and the app needs macOS 14 on a Mac.
 
 ## [0.2.3] - 2026-11-22
 

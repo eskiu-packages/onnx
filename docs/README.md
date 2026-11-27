@@ -144,7 +144,7 @@ against it, with no `-L`. On Windows the DLL is copied next to the program, ahea
 `onnxruntime.dll` that `System32` may hold.
 
 In an app on [eskiu-packages/ui](https://github.com/eskiu-packages/ui), `ui build` does the
-same from ui 0.7.1 on (an earlier ui links only a `libNAME.a` and stops with "Undefined
+same in the ui release after 0.7.0 (0.7.0 links only a `libNAME.a` and stops with "Undefined
 symbols: _OrtGetApiBase"): it links the archive's dynamic library and puts it in the app,
 `Contents/Frameworks` on macOS (rpath `@executable_path/../Frameworks`), next to the binary on
 Linux (`$ORIGIN`) and next to the `.exe` on Windows, so the app opens on a machine that never
