@@ -6,10 +6,11 @@ main = "examples/classify.esk"
 [deps]
 gpu = { git = "https://github.com/eskiu-packages/gpu", rev = "v0.8.0" }
 
-# ONNX Runtime's own release archives, fetched by eskiuc build / run / test / fetch.
+# ONNX Runtime's release archives (Microsoft's binaries from its NuGet package, in the layout
+# of its former GitHub releases), fetched by eskiuc build / run / test / fetch.
 [native.onnxruntime]
-macos-arm64 = { url = "https://github.com/microsoft/onnxruntime/releases/download/v1.31.0/onnxruntime-osx-arm64-1.31.0.tgz", sha256 = "1031b36dd3bdaa8d976a6130d9cf2a05e9be320b93ae804f8427b91dc3432afc", lib = "onnxruntime-osx-arm64-1.31.0/lib" }
-linux-x86_64 = { url = "https://github.com/microsoft/onnxruntime/releases/download/v1.31.0/onnxruntime-linux-x64-1.31.0.tgz", sha256 = "cc5c72baf5ae5c8238a6841f0897227be2d02826b9cf98eaf02fdefaeeb03a57", lib = "onnxruntime-linux-x64-1.31.0/lib" }
-linux-arm64 = { url = "https://github.com/microsoft/onnxruntime/releases/download/v1.31.0/onnxruntime-linux-aarch64-1.31.0.tgz", sha256 = "c5b8b3cca31f3d643a3b313b8f42e2d0f16a4fcefd02cda343d97bd5306afaab", lib = "onnxruntime-linux-aarch64-1.31.0/lib" }
-windows-x86_64 = { url = "https://github.com/microsoft/onnxruntime/releases/download/v1.31.0/onnxruntime-win-x64-1.31.0.zip", sha256 = "3958d8a44984160692c1b4ffd0de3cb48f8c39f9d34bb31e433db06e30b82195", lib = "onnxruntime-win-x64-1.31.0/lib" }
-windows-arm64 = { url = "https://github.com/microsoft/onnxruntime/releases/download/v1.31.0/onnxruntime-win-arm64-1.31.0.zip", sha256 = "ef6206fa8d6975878d93a97035d280240ce5764c126a7430e5427e18923316d5", lib = "onnxruntime-win-arm64-1.31.0/lib" }
+macos-arm64 = { url = "https://github.com/eskiu-packages/onnx/releases/download/onnxruntime-1.31.0/onnxruntime-osx-arm64-1.31.0.tgz", sha256 = "d648e57f81633255ac88a36557620ee81625f2c6f48615defdad23f1b29aec41", lib = "onnxruntime-osx-arm64-1.31.0/lib" }
+linux-x86_64 = { url = "https://github.com/eskiu-packages/onnx/releases/download/onnxruntime-1.31.0/onnxruntime-linux-x64-1.31.0.tgz", sha256 = "2645ba6e734e9ba4f0dc30a4c0e51ce507379017f02415d1b59c3847dfba221b", lib = "onnxruntime-linux-x64-1.31.0/lib" }
+linux-arm64 = { url = "https://github.com/eskiu-packages/onnx/releases/download/onnxruntime-1.31.0/onnxruntime-linux-aarch64-1.31.0.tgz", sha256 = "de00e512a33ddf421da3d15efa638091cc4abedfbe1a458a0e56bef8d7736639", lib = "onnxruntime-linux-aarch64-1.31.0/lib" }
+windows-x86_64 = { url = "https://github.com/eskiu-packages/onnx/releases/download/onnxruntime-1.31.0/onnxruntime-win-x64-1.31.0.zip", sha256 = "15010ea06f2c598725e16ba499270fa1d8134a3a39468a28a865abbba0ffb22b", lib = "onnxruntime-win-x64-1.31.0/lib" }
+windows-arm64 = { url = "https://github.com/eskiu-packages/onnx/releases/download/onnxruntime-1.31.0/onnxruntime-win-arm64-1.31.0.zip", sha256 = "c602b25056b1fc801b0561d6571afbefd1192cb14d78a0dd58bcba3d76a37cae", lib = "onnxruntime-win-arm64-1.31.0/lib" }
