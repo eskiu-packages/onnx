@@ -4,14 +4,18 @@ All notable changes to this package are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and versions follow
 [Semantic Versioning](https://semver.org/).
 
-## [Unreleased]
+## [0.2.4] - 2026-11-26
+
+### Changed
+
+- Depends on gpu 0.8.0.
 
 ### Changed
 
 - docs/README.md says how a ui app gets ONNX Runtime: `ui build` links its dynamic library
   and puts it in the app (the ui release after 0.7.0), and the app needs macOS 14 on a Mac.
 
-## [0.2.3] - 2026-11-22
+## [0.2.3]
 
 ### Changed
 
