@@ -9,9 +9,10 @@ All notable changes to this package are documented here. The format follows
 ### Changed
 
 - Depends on gpu 0.8.0.
-
-### Changed
-
+- ONNX Runtime 1.31.0 comes from this repository's `onnxruntime-1.31.0` release:
+  `microsoft/onnxruntime` is no longer reachable on GitHub, so the archives are Microsoft's
+  binaries from its NuGet package (Microsoft.ML.OnnxRuntime 1.31.0), in the layout of its
+  former GitHub releases.
 - docs/README.md says how a ui app gets ONNX Runtime: `ui build` links its dynamic library
   and puts it in the app (the ui release after 0.7.0), and the app needs macOS 14 on a Mac.
 
